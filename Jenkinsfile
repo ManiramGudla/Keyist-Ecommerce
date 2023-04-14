@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'First Commit'
         sh '''#!/bin/bash
-ll'''
+mkdir demo'''
       }
     }
 
