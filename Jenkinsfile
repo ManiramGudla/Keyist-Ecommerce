@@ -4,7 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         echo 'First Commit'
-        sh 'll'
+        sh '''#!/bin/bash
+ll'''
       }
     }
 
