@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'First Commit'
-        sh './mvnw compile'
+        sh './mvn clean compile'
       }
     }
 
