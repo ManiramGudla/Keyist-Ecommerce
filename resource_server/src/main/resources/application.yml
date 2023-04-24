@@ -16,7 +16,7 @@ spring:
       maximum-pool-size: 5
       minimum-idle: 2
       pool-name: data-source
-    url: jdbc:mysql://localhost:3306/keyist?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
+    url: jdbc:mysql://52.66.227.533306/keyist?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
     password: password
     username: username
   jackson:
@@ -50,7 +50,7 @@ security:
   public-pattern: /api/public/**
   auth:
     username: user_name
-    url: http://localhost:8081/oauth/check_token
+    url: http://52.66.227.53:8081/oauth/check_token
     client_id: client_id
     client_password: client_password
     connection_timeout: 60
@@ -68,7 +68,7 @@ security:
 
 swagger:
   host:
-    address: localhost:8080
+    address: 52.66.227.53:8080
     path: /
   api:
     name: Keyist Api Documentation
