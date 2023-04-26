@@ -1,0 +1,30 @@
+- hosts: 127.0.0.1
+  vars_prompt:
+  - name: version
+  - name: ip
+  tasks:
+  - name: Ansible replace string example
+    replace:
+      path: /home/ubuntu/testVersion/'{{version}}'/Keyist-Ecommerce/client/e2e/protractor.conf.js
+      regexp: 'localhost'
+      replace: '{{ip}}'   
+  - name: Ansible replace string examples
+    replace:
+      path: /home/ubuntu/testVersion/'{{version}}'/Keyist-Ecommerce/client/src/config/local.ts
+      regexp: 'localhost'
+      replace: '{{ip}}'
+  - name: Ansible 
+    replace:
+      path: /home/ubuntu/testVersion/'{{version}}'/Keyist-Ecommerce/client/.nginx.conf
+      regexp: 'localhost'
+      replace: '{{ip}}'    
+  - name: Ansible replace
+    replace:
+      path: /home/ubuntu/testVersion/'{{version}}'/Keyist-Ecommerce/resource_server/src/main/resources/application.yml
+      regexp: 'localhost'
+      replace: '{{ip}}'        
+  - name: Ansible replace string
+    replace:
+      path: /home/ubuntu/testVersion/'{{version}}'/Keyist-Ecommerce/authorization_server/src/main/resources/application.yml
+      regexp: 'localhost'
+      replace: '{{ip}}'      
