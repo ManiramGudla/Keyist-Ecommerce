@@ -302,7 +302,30 @@ create table verification_token
 );
 
 INSERT INTO keyist.oauth_client_details (client_id, resource_ids, client_secret, scope, authorized_grant_types, web_server_redirect_uri, authorities, access_token_validity, refresh_token_validity, additional_information, autoapprove) VALUES ('test', 'resource-server-rest-api', '$2a$04$v8DNBoc36pw4c7b7Xyq/aeSpGneF9WciZUI9FibVz0neksUcPBXVS', 'read,write', 'password,authorization_code,refresh_token,implicit', null, 'USER', 10800, 2592000, null, null);
-INSERT INTO keyist.product_category (id, name) VALUES (1, 'Test');
+INSERT INTO keyist.product_category (id, name) VALUES (1, 'My Home');
 INSERT INTO keyist.color (id, name, hex) VALUES (1, 'red', '#ff144b');
-INSERT INTO keyist.product (id, category_id, sku, name, url, long_desc, date_created, last_updated, unlimited) VALUES (1, 1, '000-0001', 'Test', 'test', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s. ', '2018-05-18 09:50:48', '2020-10-22 01:55:43', 1);
-INSERT INTO keyist.product_variant (id, product_id, color_id, width, height, price, composition, cargo_price, tax_percent, sell_count, stock, live, image, thumb) VALUES (1, 1, 1, '4cm', '10cm', 9.99, 'Copper 70%, Zinc 30%', 5, 10, 6, 1000, 1, 'image-url-here', 'image-url-here');
+INSERT INTO keyist.product (id, category_id, sku, name, url, long_desc, date_created, last_updated, unlimited) VALUES (1, 1, '000-0001', 'My Home', 'https://res.cloudinary.com/keyist/image/upload/v1603401003/my-home_pink_r6rmfo.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s. ', '2018-05-18 09:50:48', '2020-10-22 01:55:43', 1);
+INSERT INTO keyist.product_variant (id, product_id, color_id, width, height, price, composition, cargo_price, tax_percent, sell_count, stock, live, image, thumb) VALUES (1, 1, 1, '4cm', '10cm', 9.99, 'Copper 70%, Zinc 30%', 5, 10, 6, 1000, 1, 'https://res.cloudinary.com/keyist/image/upload/v1603401003/my-home_pink_r6rmfo.jpg', 'https://res.cloudinary.com/keyist/image/upload/v1603401003/my-home_pink_r6rmfo.jpg')
+
+
+
+INSERT INTO keyist.product_category (id, name) VALUES (2, 'cutie dog');
+INSERT INTO keyist.color (id, name, hex) VALUES (2, 'blue', '#F0F8FF');
+INSERT INTO keyist.product (id, category_id, sku, name, url, long_desc, date_created, last_updated, unlimited) VALUES (2, 2, '000-0001', 'cutie dog', 'https://res.cloudinary.com/keyist/image/upload/v1603319014/cutie-dog_pink_puaumb.jpg', 'Cute dogs are a subjective preference, but some breeds that are often considered cute are Pomeranian, Puggle, Lakeland Terrier, Bichon Frise, and Cavalier King Charles Spaniel', '2023-04-23 09:50:48', '2020-10-22 01:55:43', 10);
+INSERT INTO keyist.product_variant (id, product_id, color_id, width, height, price, composition, cargo_price, tax_percent, sell_count, stock, live, image, thumb) VALUES (2, 2, 2, '4cm', '10cm', 15, 'Copper 60%, Zinc 30%', 5, 10, 6, 1000, 1, 'https://res.cloudinary.com/keyist/image/upload/v1603319014/cutie-dog_pink_puaumb.jpg', 'https://res.cloudinary.com/keyist/image/upload/v1603319014/cutie-dog_pink_puaumb.jpg');
+
+
+INSERT INTO keyist.product_category (id, name) VALUES (3, 'teddy bear');
+INSERT INTO keyist.color (id, name, hex) VALUES (3, 'green', '#B0E0E6');
+INSERT INTO keyist.product (id, category_id, sku, name, url, long_desc, date_created, last_updated, unlimited) VALUES (3, 3, '000-0001', 'teddy bear', 'https://res.cloudinary.com/keyist/image/upload/v1603319076/teddy-bear_blue_spzaj6.jpg', 'A teddy bear is a stuffed toy in the form of a bear. Developed apparently simultaneously by toymakers Morris Michtom in the U.S.', '2023-04-23 09:50:48', '2020-10-22 01:55:43', 15);
+INSERT INTO keyist.product_variant (id, product_id, color_id, width, height, price, composition, cargo_price, tax_percent, sell_count, stock, live, image, thumb) VALUES (3, 3, 3, '4cm', '10cm', 25, 'Copper 60%, Zinc 30%', 5, 10, 6, 1000, 1, 'https://res.cloudinary.com/keyist/image/upload/v1603319076/teddy-bear_blue_spzaj6.jpg', 'https://res.cloudinary.com/keyist/image/upload/v1603319076/teddy-bear_blue_spzaj6.jpg');
+
+
+INSERT INTO keyist.product_variant (id, product_id, color_id, width, height, price, composition, cargo_price, tax_percent, sell_count, stock, live, image, thumb) VALUES (4, 2, 2, '4cm', '10cm', 10, 'Copper 60%, Zinc 30%', 5, 10, 6, 1000, 1, 'https://res.cloudinary.com/keyist/image/upload/v1603319055/sweetie-bird_pink_cbvfqg.jpg','https://res.cloudinary.com/keyist/image/upload/v1603319055/sweetie-bird_pink_cbvfqg.jpg');
+
+
+INSERT INTO keyist.product_variant (id, product_id, color_id, width, height, price, composition, cargo_price, tax_percent, sell_count, stock, live, image, thumb) VALUES (5, 2, 2, '4cm', '10cm', 40, 'Copper 60%, Zinc 30%', 5, 10, 6, 1000, 1, 'https://res.cloudinary.com/keyist/image/upload/v1603318934/cartoon-house_purple_dulsoy.jpg','https://res.cloudinary.com/keyist/image/upload/v1603318934/cartoon-house_purple_dulsoy.jpg');
+
+INSERT INTO keyist.product_variant (id, product_id, color_id, width, height, price, composition, cargo_price, tax_percent, sell_count, stock, live, image, thumb) VALUES (6, 2, 2, '4cm', '10cm', 3, 'Copper 60%, Zinc 30%', 5, 10, 6, 1000, 1,'https://res.cloudinary.com/keyist/image/upload/v1603319043/sweet-home_black_t4zooe.jpg','https://res.cloudinary.com/keyist/image/upload/v1603319043/sweet-home_black_t4zooe.jpg');
+
+INSERT INTO keyist.product_variant (id, product_id, color_id, width, height, price, composition, cargo_price, tax_percent, sell_count, stock, live, image, thumb) VALUES (7, 2, 2, '4cm', '10cm', 20, 'Copper 60%, Zinc 30%', 5, 10, 6, 1000, 1,'https://res.cloudinary.com/keyist/image/upload/v1603319001/cutie-cat_pink_opysqj.jpg','https://res.cloudinary.com/keyist/image/upload/v1603319001/cutie-cat_pink_opysqj.jpg');
